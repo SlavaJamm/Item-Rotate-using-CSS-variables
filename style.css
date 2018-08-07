@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Nixie+One');
+
+:root{
+    --x: 10deg;
+    --y: 10deg;
+    --z: 10deg;
+}
+
+html{
+    height: 100%;
+    font-family: 'Nixie One', cursive;
+}
+body{
+    margin: 0;
+    color: #fff;
+    background: #F4E2D8;
+    animation: gradient-move 15s linear infinite;
+}
+
+@keyframes gradient-move {
+    10%{background-color: #FF5F6D}
+    20%{background-color: rgb(255, 199, 121)}
+    40%{background-color: #ff9068}
+    60%{background-color: #CB3066}
+    80%{background-color: #16BFFD}
+    90%{background-color: #EECDA3}
+}
+
+/* cart style */
+h1{
+    margin-top: 110px;
+    margin-bottom: 50px;
+}
+.cart-wrap {
+    margin: 30px auto;
+    text-align: center;
+}
+.cart-wrap img{
+    width: 600px;
+    height: 350px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1)
+}
+.inputs-wrap{
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+.input-group{
+    display: inline-block;
+    margin: 20px;
+}
+
+/* var style */
+.cart-img{
+    transform: rotateX(var(--x)) rotateY(var(--y)) rotateZ(var(--z));
+    transition: all 0.5s;
+}
